@@ -1,0 +1,7 @@
+type: torchbuffer
+
+capacity: 100000
+batch_size: 32
+max_replay_steps: 100
+replay_start_step: 1
+

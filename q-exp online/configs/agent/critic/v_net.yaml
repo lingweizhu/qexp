@@ -1,0 +1,17 @@
+optimizer:
+  name: Adam
+  lr: 1e-3
+  weight_decay: 0
+  betas:
+    - 0.9
+    - 0.999
+  eps: 1e-8
+
+network:
+  name: v_net
+  hidden_dim: 64
+  init: xavier_normal
+  activation: relu
+  use_target_network: False
+  tau: 0.01
+  target_update_interval: 10

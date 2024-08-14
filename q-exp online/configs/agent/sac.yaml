@@ -1,0 +1,41 @@
+defaults:
+  - actor: squashed_gaussian
+  - critic: double_q_net
+  - buffer: basic_buffer
+  - _self_
+
+name: sac
+
+gamma: 0.99
+
+# The entropy regularization temperature
+alpha: 0.1
+# Whether the agent should automatically tune its entropy
+# hyperparmeter alpha, by default False
+automatic_entropy_tuning: False
+# lr for automatic entropy tuning
+alpha_lr: 0.0
+
+# num actions to use for computing baseline
+# <= 0 value for no baseline
+baseline_actions: -1
+
+# Whether to use the reparameterization trick to learn the policy or
+# to use the log-likelihood trick. The original SAC uses the
+# reparameterization trick.
+reparameterized: True
+
+# The number of samples to use to estimate the gradient when using a
+# likelihood-based SAC (i.e. `reparameterized == False`), by default 1
+n_samples_for_entropy: 1
+
+# Whether or not to learn soft Q functions, by default True. The
+# original SAC uses soft Q functions since we learn an
+# entropy-regularized policy. When learning an entropy regularized
+# policy, guaranteed policy improvement (in the ideal case) only
+# exists with respect to soft action values.
+soft_q: True
+
+# whether we want to maintain actor.old_policy for
+# for computing KL-based losses
+store_old_policy: False

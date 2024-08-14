@@ -1,0 +1,31 @@
+defaults:
+  - db: credentials-rlaidb
+  - schema: default-schema
+  - agent: sac
+  - env: gym-mountaincar-continuous
+  - agent/sweepers@hydra.sweeper.params: base_sweeper
+  - override hydra/launcher: joblib
+  - override hydra/job_logging: default
+  - _self_
+
+
+run: 0
+db_prefix: username
+db_name: 300_sac_debug
+seed: 1337
+steps: 300000
+learning_starts: 0
+evaluation_steps: 10000 # evaluate every x steps
+evaluation_episodes: 5 # how many episodes we want to avg over
+n_threads: 1
+device: cpu # or cuda
+
+# do a sweep with these settings by doing python main.py -m
+hydra:
+# mode: MULTIRUN
+ launcher:
+   n_jobs: 40
+ sweeper:
+   params:
+     seed: range(0,10)
+     agent/actor: glob(*) # sweep over all policies

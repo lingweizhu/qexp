@@ -1,0 +1,14 @@
+defaults:
+  - actor: gaussian
+  - critic: q_net
+  - buffer: basic_buffer
+  - _self_
+
+name: greedyac
+
+gamma: 0.99
+alpha: 1 # entropy
+n_action_proposals: 30
+rho: 0.1 # percentage of action proposals selected
+entropy_from_single_sample: True
+store_old_policy: False

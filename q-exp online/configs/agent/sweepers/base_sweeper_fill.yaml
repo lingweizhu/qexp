@@ -1,0 +1,5 @@
+agent.alpha: 0.01, 0.001
+
+agent.critic.optimizer.lr: 0.001
+
+agent.actor.optimizer.critic_lr_multiplier: 0.1, 1.0

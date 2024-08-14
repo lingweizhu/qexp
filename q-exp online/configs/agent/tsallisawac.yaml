@@ -1,0 +1,14 @@
+defaults:
+  - actor: gaussian
+  - critic: q_net
+  - buffer: basic_buffer
+  - _self_
+
+name: tsallis_awac
+
+gamma: 0.99
+alpha: 0.1 # KL coef
+n_action_proposals: 30
+rho: 0.1 
+entropic_index: 0
+store_old_policy: False

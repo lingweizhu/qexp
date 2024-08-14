@@ -1,0 +1,19 @@
+optimizer:
+  name: Adam
+  lr: 1e-3 # this is ignored
+  critic_lr_multiplier: 1 # multiply critic lr by this to use as actor lr
+  weight_decay: 0
+  betas:
+    - 0.9
+    - 0.999
+  eps: 1e-8
+
+policy:
+  policy: heavytailed_gaussian
+  mean_init: 0
+  shape_init: 1
+  hidden_dim: 64
+  activation: relu
+  init: xavier_uniform # for weights
+  entropic_index: 2
+  clip_stddev: 1000 #unused

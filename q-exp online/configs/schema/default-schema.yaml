@@ -1,0 +1,44 @@
+errors:
+  columns:
+    run: 0
+    step: 0
+    mse: 0.0
+  primary_keys: [run,step]
+
+returns:
+  columns:
+    run: 0
+    step: 0
+    episode: 0
+    reward: 0
+  primary_keys: [run,step]
+
+debug_agent:
+  columns:
+    run: 0
+    step: 0
+    episode: 0
+    state: []
+    reward: 0
+    action: []
+  primary_keys: [run,step]
+
+debug_policy:
+  columns:
+    run: 0
+    step: 0
+    episode: 0
+    policy_means: []
+    policy_stds: []
+  primary_keys: [run,step]
+
+summary:
+  columns:
+    run: 0
+    step: 0
+    episode: 0
+    auc100: 0
+    auc50: 0
+    auc10: 0
+    time_taken: 0.0
+  primary_keys: [run]
