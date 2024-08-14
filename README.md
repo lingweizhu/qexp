@@ -1,5 +1,11 @@
-# Code submission for online learning experiments
-Refer to the "q-exp online" directory for reproducing offline results
+# q-exponential family for policy optimization
+This is the code base accompanying our paper "q-exponential family for policy optimization".
+
+We included heavy-tailed and light-tailed distributions.
+
+
+
+# online results 
 
 All the run statistics are logged to a MySQL database server. The schema can be found in [`configs/schema/default-schema.yaml`](configs/schema/default-schema.yaml)
 ## How to run
@@ -24,9 +30,8 @@ database.
 python main.py run=0
 ```
 
-# Code submission for offline learning experiments
 
-Refer to the "q-exp offline" directory for reproducing offline results
+# offline results 
 
 Generate scripts:
 
