@@ -52,10 +52,12 @@ Test one run:
 All runs:
 ```
 parallel ./configs/scripts/tasks_{}.sh ::: $(seq 0 6224)
-```%
+```
 
 # citing
+
 If you find this code helpful, please consider citing our paper
+
 ```
 @inproceedings{Zhu2025-qExpPolicy,
 title={q-exponential Family for Policy Optimization},
