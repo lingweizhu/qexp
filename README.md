@@ -1,14 +1,14 @@
 # q-exponential family for policy optimization
-This is the code base accompanying our paper "q-exponential family for policy optimization".
+This is the code base accompanying our ICLR 2025 paper "q-exponential family for policy optimization".
 
-We included heavy-tailed and light-tailed distributions.
+We included the Gaussian, heavy-tailed and light-tailed distributions.
 
 
 
-# online results 
+## online results 
 
 All the run statistics are logged to a MySQL database server. The schema can be found in [`configs/schema/default-schema.yaml`](configs/schema/default-schema.yaml)
-## How to run
+### How to run
 0. This codebase contains some features that are only available in Python3.10+
 
 1. Install requirements:
@@ -31,7 +31,7 @@ python main.py run=0
 ```
 
 
-# offline results 
+## offline results 
 
 Generate scripts:
 
@@ -53,3 +53,14 @@ All runs:
 ```
 parallel ./configs/scripts/tasks_{}.sh ::: $(seq 0 6224)
 ```%
+
+# citing
+If you find this code helpful, please consider citing our paper
+```
+@inproceedings{Zhu2025-qExpPolicy,
+title={q-exponential Family for Policy Optimization},
+author={Lingwei Zhu and Haseeb Shah and Han Wang and Yukie Nagai and Martha White},
+booktitle={International Conference on Learning Representations (ICLR)},
+year={2025},
+}
+```
