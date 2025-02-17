@@ -1,5 +1,5 @@
 # q-exponential family for policy optimization
-This is the code base accompanying our ICLR 2025 paper "q-exponential family for policy optimization".
+This is the code base accompanying our ICLR 2025 paper [q-exponential family for policy optimization](https://openreview.net/pdf?id=OyyE1FDdrQ).
 
 We included the Gaussian, heavy-tailed and light-tailed distributions.
 
